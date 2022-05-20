@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Main />} />
-          <Route exact path="/navy-admin8585" element={<Admin />} />
+          <Route exact path="the-admin-path" element={<Admin />} />
         </Routes>
       </BrowserRouter>
     </div>
