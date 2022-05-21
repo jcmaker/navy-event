@@ -405,6 +405,19 @@ a {
   animation-delay: 0.2s;
   animation-fill-mode: both;
 }
+
+.main-red-team-box {
+  animation: fromLeft 0.6s ease-in-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+.main-blue-team-box {
+  animation: fromRight 0.6s ease-in-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
 .main-blue-team {
   animation: fromRight 0.6s ease-in-out;
   animation-delay: 0.2s;

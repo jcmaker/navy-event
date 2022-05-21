@@ -7,7 +7,6 @@ import MainSetTwo from "../components/MainSetTwo";
 import MainSetThree from "../components/MainSetThree";
 import MainSetFour from "../components/MainSetFour";
 import Footer from "./Footer";
-import ModalScreen from "../components/ModalScreen";
 
 function Main() {
   const [isOpen, setIsOpen] = useState(false);
