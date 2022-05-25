@@ -25,6 +25,7 @@
 ## Features
 
 - 운영자/편집 모드
+- 404 page
 - realtime database
 - useState, useEffect
 
