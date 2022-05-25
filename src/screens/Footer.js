@@ -22,7 +22,7 @@ function Footer() {
                 경기는 5라운드 3선승으로 진행되며, 특정 팀이 3승을 선취하는 경우
                 종료.
                 <br />
-                [1라운드]►[2라운드]►[3라운드]►[4라운드]►[5라운드]
+                [1라운드]▶︎[2라운드]▶︎[3라운드]▶︎[4라운드]▶︎[5라운드]
                 <br />
                 라운드 합산 점수가 동률인 경우 1위 팀 해당 라운드 승.
               </span>
@@ -48,7 +48,7 @@ function Footer() {
                 경기는 5라운드 3선승으로 진행되며, 특정 팀이 3승을 선취하는 경우
                 종료.
                 <br />
-                [1라운드]►[2라운드]►[3라운드]►[4라운드]►[5라운드]
+                [1라운드]▶︎[2라운드]▶︎[3라운드]▶︎[4라운드]▶︎[5라운드]
               </span>
             </div>
             <div className="rule-container">
@@ -105,6 +105,31 @@ function Footer() {
             </div>
           </div>
         </div>
+        <div className="about">
+          <h4>맵 밴픽</h4>
+          <div className="rule">
+            <div className="rule-container">
+              <span className="rule-title">스피드 전</span>
+              <span className="rule-text">
+                [고정맵] ▶︎ [1팀 픽] ▶︎ [2팀 밴] ▶︎ [1팀 밴] ▶︎ [2팀 픽] ▶︎ [1팀
+                픽] ▶︎ [2팀 픽]
+              </span>
+            </div>
+            <div className="rule-container">
+              <span className="rule-title">아이템 전</span>
+              <span className="rule-text">
+                [고정맵] ▶︎ [1팀 픽] ▶︎ [2팀 밴] ▶︎ [1팀 밴] ▶︎ [2팀 픽] ▶︎ [1팀
+                픽] ▶︎ [2팀 픽]
+              </span>
+            </div>
+            <div className="rule-container">
+              {/* <span className="rule-title"></span> */}
+              <span className="rule-text">
+                각 팀에서 대표를 뽑아 내전 진행 30분 전까지 밴픽 진행.
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="footer-last">
         <br />
@@ -118,7 +143,7 @@ function Footer() {
           </a>
         </span>
       </div>
-      <div className="addToDo">
+      <div className="openRule">
         {isOpen === true ? (
           <img
             alt="close"

@@ -3,15 +3,15 @@ import React from "react";
 function ModalScreen({ open, onClose }) {
   if (!open) return null;
   return (
-    <div className="modal">
+    <div className="modal" onClick={onClose}>
       <div className="modal-card">
         <div className="modal-header">
-          <h1>내전 주의 사항</h1>
+          <h1>주의 사항</h1>
           <h5>✶꼭 숙지 하고 참여 할 것을 당부드림✶</h5>
         </div>
         <div className="modal-body">
-          <p>✭ 내전 시작 시간은 꼭 지켜주세요 ( 5분 전 접속 )</p>
-          <p>✭ 내전은 친해지기 위함. 매너는 꼭 지켜주세요.</p>
+          <p>✭ 내전, 친선 시작 시간은 꼭 지켜주세요 ( 5분 전 접속 )</p>
+          <p>✭ 내전, 친선은 친해지기 위함. 매너는 꼭 지켜주세요.</p>
           <p>
             ✭ 이길때도 질때도 있는법. 승패도 중요하지만 즐기면서 게임 합시다.
           </p>
