@@ -44,54 +44,56 @@ function SetOne() {
           >
             {doc.mapId}
           </span>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
+          <div className="set-list-btn">
+            <button
+              onClick={(e) => {
+                e.preventDefault();
 
-              // setOptionClass("");
-              db.collection("speedMap").doc(doc.id).set(
-                {
-                  mapPick: true,
-                  optionClass1: "pick",
-                },
-                { merge: true }
-              );
-            }}
-          >
-            PICK
-          </button>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
+                // setOptionClass("");
+                db.collection("speedMap").doc(doc.id).set(
+                  {
+                    mapPick: true,
+                    optionClass1: "pick",
+                  },
+                  { merge: true }
+                );
+              }}
+            >
+              PICK
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
 
-              // setOptionClass("");
-              db.collection("speedMap").doc(doc.id).set(
-                {
-                  mapBan: true,
-                  optionClass1: "ban",
-                },
-                { merge: true }
-              );
-            }}
-          >
-            BAN
-          </button>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
+                // setOptionClass("");
+                db.collection("speedMap").doc(doc.id).set(
+                  {
+                    mapBan: true,
+                    optionClass1: "ban",
+                  },
+                  { merge: true }
+                );
+              }}
+            >
+              BAN
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
 
-              // setOptionClass("");
-              db.collection("speedMap").doc(doc.id).set(
-                {
-                  mapStick: true,
-                  optionClass1: "stick",
-                },
-                { merge: true }
-              );
-            }}
-          >
-            고정
-          </button>
+                // setOptionClass("");
+                db.collection("speedMap").doc(doc.id).set(
+                  {
+                    mapStick: true,
+                    optionClass1: "stick",
+                  },
+                  { merge: true }
+                );
+              }}
+            >
+              고정
+            </button>
+          </div>
         </div>
       ))}
     </div>

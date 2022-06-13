@@ -44,54 +44,56 @@ function SetThree() {
           >
             {doc.mapId}
           </span>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
+          <div className="set-list-btn">
+            <button
+              onClick={(e) => {
+                e.preventDefault();
 
-              // setOptionClass("pick");
-              db.collection("itemMap").doc(doc.id).set(
-                {
-                  mapPick: true,
-                  optionClass3: "pick",
-                },
-                { merge: true }
-              );
-            }}
-          >
-            PICK
-          </button>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
+                // setOptionClass("pick");
+                db.collection("itemMap").doc(doc.id).set(
+                  {
+                    mapPick: true,
+                    optionClass3: "pick",
+                  },
+                  { merge: true }
+                );
+              }}
+            >
+              PICK
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
 
-              // setOptionClass("ban");
-              db.collection("itemMap").doc(doc.id).set(
-                {
-                  mapBan: true,
-                  optionClass3: "ban",
-                },
-                { merge: true }
-              );
-            }}
-          >
-            BAN
-          </button>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
+                // setOptionClass("ban");
+                db.collection("itemMap").doc(doc.id).set(
+                  {
+                    mapBan: true,
+                    optionClass3: "ban",
+                  },
+                  { merge: true }
+                );
+              }}
+            >
+              BAN
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
 
-              // setOptionClass("stick");
-              db.collection("itemMap").doc(doc.id).set(
-                {
-                  mapStick: true,
-                  optionClass3: "stick",
-                },
-                { merge: true }
-              );
-            }}
-          >
-            고정
-          </button>
+                // setOptionClass("stick");
+                db.collection("itemMap").doc(doc.id).set(
+                  {
+                    mapStick: true,
+                    optionClass3: "stick",
+                  },
+                  { merge: true }
+                );
+              }}
+            >
+              고정
+            </button>
+          </div>
         </div>
       ))}
     </div>

@@ -22,6 +22,17 @@ function ModalScreen({ open, onClose }) {
           </p>
           <p>✭ 아래 진행 방식 꼭 읽어주시기를 바랍니다.</p>
         </div>
+        <br />
+        <div className="inquiry">
+          <a
+            className="address"
+            href="https://open.kakao.com/o/gt4C7LJc"
+            target="_blank"
+            rel="noreferrer"
+          >
+            친선문의 ❯❯
+          </a>
+        </div>
       </div>
     </div>
   );

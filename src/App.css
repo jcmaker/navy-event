@@ -122,6 +122,17 @@ a {
   align-items: center;
 }
 
+.form-input {
+  border-bottom: 0.16rem solid gray;
+}
+
+button {
+  background-color: #e2e2e2;
+  border-radius: 10px;
+  width: 45px;
+  height: 20px;
+}
+
 .line-up {
   flex: 1;
   width: 100%;
@@ -218,13 +229,23 @@ a {
 }
 
 .set-list {
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-bottom: 0.125rem solid #006ab7;
+}
+
+.set-list-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.set-list-btn button {
+  margin-left: 0.25rem;
 }
 
 .stick {
@@ -622,7 +643,7 @@ a {
 }
 .modal-card {
   width: 80%;
-
+  max-width: 37.5rem;
   background-color: #006ab7;
   border-radius: 1.25rem;
   /* border: 0.0625rem solid var(--main-color); */
@@ -649,6 +670,12 @@ a {
 
 .modal-header h5 {
   color: orange;
+}
+
+.inquiry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .openRule {
@@ -722,4 +749,5 @@ code {
   align-items: center;
   color: #fff;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
