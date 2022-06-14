@@ -13,7 +13,6 @@ function MapSection() {
       <SetTwo />
       <SetThree />
       <SetFour />
-      {/* <h4>ACE</h4> */}
     </div>
   );
 }

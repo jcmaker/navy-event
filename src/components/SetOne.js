@@ -4,7 +4,6 @@ import db from "../fbManager";
 function SetOne() {
   const [getSpeedMap, setGetSpeedMap] = useState([]);
 
-  // const [optionClass, setOptionClass] = useState("");
   useEffect(() => {
     db.collection("speedMap")
       .orderBy("timestamp", "asc")
@@ -23,9 +22,7 @@ function SetOne() {
   return (
     <div className="set-one">
       <h4>set 1</h4>
-
       {getSpeedMap.map((doc) => (
-        // <blueUser userId={doc.userId} docId={doc.id} />
         <div className="set-list">
           <span
             className={doc.optionClass1}
@@ -48,8 +45,6 @@ function SetOne() {
             <button
               onClick={(e) => {
                 e.preventDefault();
-
-                // setOptionClass("");
                 db.collection("speedMap").doc(doc.id).set(
                   {
                     mapPick: true,
@@ -64,8 +59,6 @@ function SetOne() {
             <button
               onClick={(e) => {
                 e.preventDefault();
-
-                // setOptionClass("");
                 db.collection("speedMap").doc(doc.id).set(
                   {
                     mapBan: true,
@@ -80,8 +73,6 @@ function SetOne() {
             <button
               onClick={(e) => {
                 e.preventDefault();
-
-                // setOptionClass("");
                 db.collection("speedMap").doc(doc.id).set(
                   {
                     mapStick: true,
@@ -99,5 +90,4 @@ function SetOne() {
     </div>
   );
 }
-
 export default SetOne;

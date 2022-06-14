@@ -4,7 +4,6 @@ import db from "../fbManager";
 
 function MainBlueTeam() {
   const [bringBlueLineUp, setBringBlueLineUp] = useState([]);
-
   const [bringBlueWaiter, setBringBlueWaiter] = useState([]);
 
   useEffect(() => {
@@ -39,7 +38,6 @@ function MainBlueTeam() {
         <div className="main-line-up">
           <h4>선발</h4>
           {bringBlueLineUp.map((doc) => (
-            // <blueUser userId={doc.userId} docId={doc.id} />
             <div className="main-user-list">
               <span>{doc.userId}</span>
             </div>

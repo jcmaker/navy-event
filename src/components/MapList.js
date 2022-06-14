@@ -68,7 +68,6 @@ function MapList() {
       <div className="map-speed">
         <h4>speed</h4>
         {getSpeedMap.map((doc) => (
-          // <blueUser userId={doc.userId} docId={doc.id} />
           <div className="speed-list">
             <span>{doc.mapId}</span>
             <button
@@ -101,7 +100,6 @@ function MapList() {
       <div className="map-item">
         <h4>item</h4>
         {getItemMap.map((doc) => (
-          // <blueUser userId={doc.userId} docId={doc.id} />
           <div className="item-list">
             <span>{doc.mapId}</span>
             <button

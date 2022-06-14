@@ -32,11 +32,9 @@ function MainMapList() {
 
   return (
     <div className="main-map-list">
-      {/* <h4>맵 목록</h4> */}
       <div className="main-map-speed">
         <h2>speed</h2>
         {getSpeedMap.map((doc) => (
-          // <blueUser userId={doc.userId} docId={doc.id} />
           <div className="main-speed-list">
             <span>{doc.mapId}</span>
           </div>
@@ -46,7 +44,6 @@ function MainMapList() {
       <div className="main-map-item">
         <h2>item</h2>
         {getItemMap.map((doc) => (
-          // <blueUser userId={doc.userId} docId={doc.id} />
           <div className="main-item-list">
             <span>{doc.mapId}</span>
           </div>

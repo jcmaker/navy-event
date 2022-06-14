@@ -24,7 +24,6 @@ function MainSetThree() {
       <h2>set 3</h2>
       <div className="main-set-grid">
         {getItemMap.map((doc) => (
-          // <blueUser userId={doc.userId} docId={doc.id} />
           <div className="main-set-one-list">
             <span
               className={

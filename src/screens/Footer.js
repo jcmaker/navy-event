@@ -97,7 +97,6 @@ function Footer() {
               </span>
             </div>
             <div className="rule-container">
-              {/* <span className="rule-title"></span> */}
               <span className="rule-text">
                 모든 클럽원이 플레이를 할수 있기 위함과 팀 밸런스를 맞추기 위한
                 목적.
@@ -123,7 +122,6 @@ function Footer() {
               </span>
             </div>
             <div className="rule-container">
-              {/* <span className="rule-title"></span> */}
               <span className="rule-text">
                 각 팀에서 대표를 뽑아 내전 진행 30분 전까지 밴픽 진행.
               </span>

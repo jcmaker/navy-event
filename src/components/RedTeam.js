@@ -58,7 +58,6 @@ function RedTeam() {
         <div className="line-up">
           <h4>선발</h4>
           {bringRedLineUp.map((doc) => (
-            // <UserList userId={doc.userId} docId={doc.id} />
             <div className="user-list">
               <span>{doc.userId}</span>
               <button

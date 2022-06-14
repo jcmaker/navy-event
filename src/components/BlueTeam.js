@@ -6,7 +6,6 @@ import firebase from "firebase";
 function BlueTeam() {
   const [blueLineUp, setBlueLineUp] = useState("");
   const [bringBlueLineUp, setBringBlueLineUp] = useState([]);
-
   const [blueWaiter, setBlueWaiter] = useState("");
   const [bringBlueWaiter, setBringBlueWaiter] = useState([]);
 
@@ -58,7 +57,6 @@ function BlueTeam() {
         <div className="line-up">
           <h4>선발</h4>
           {bringBlueLineUp.map((doc) => (
-            // <blueUser userId={doc.userId} docId={doc.id} />
             <div className="user-list">
               <span>{doc.userId}</span>
               <button

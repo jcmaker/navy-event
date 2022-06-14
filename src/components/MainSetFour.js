@@ -24,7 +24,6 @@ function MainSetFour() {
       <h2>set 4</h2>
       <div className="main-set-grid">
         {getSpeedMap.map((doc) => (
-          // <blueUser userId={doc.userId} docId={doc.id} />
           <div className="main-set-one-list">
             <span
               className={

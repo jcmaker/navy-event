@@ -5,7 +5,6 @@ import Admin from "./screens/Admin";
 import NoMatchScreen from "./screens/NoMatchScreen";
 
 function App() {
-  console.log(process.env.REACT_APP_ADMIN_LINK);
   return (
     <div className="App">
       <BrowserRouter>

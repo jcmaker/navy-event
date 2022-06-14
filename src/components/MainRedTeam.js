@@ -4,7 +4,6 @@ import db from "../fbManager";
 
 function MainRedTeam() {
   const [bringRedLineUp, setBringRedLineUp] = useState([]);
-
   const [bringRedWaiter, setBringRedWaiter] = useState([]);
 
   useEffect(() => {
@@ -39,7 +38,6 @@ function MainRedTeam() {
         <div className="main-line-up">
           <h4>선발</h4>
           {bringRedLineUp.map((doc) => (
-            // <UserList userId={doc.userId} docId={doc.id} />
             <div className="main-user-list">
               <span>{doc.userId}</span>
             </div>

@@ -3,8 +3,6 @@ import db from "../fbManager";
 
 function SetThree() {
   const [getItemMap, setGetItemMap] = useState([]);
-
-  // const [optionClass, setOptionClass] = useState("");
   useEffect(() => {
     db.collection("itemMap")
       .orderBy("timestamp", "asc")
@@ -23,9 +21,7 @@ function SetThree() {
   return (
     <div className="set-one">
       <h4>set 3</h4>
-
       {getItemMap.map((doc) => (
-        // <blueUser userId={doc.userId} docId={doc.id} />
         <div className="set-list">
           <span
             onClick={(e) => {
@@ -48,8 +44,6 @@ function SetThree() {
             <button
               onClick={(e) => {
                 e.preventDefault();
-
-                // setOptionClass("pick");
                 db.collection("itemMap").doc(doc.id).set(
                   {
                     mapPick: true,
@@ -64,8 +58,6 @@ function SetThree() {
             <button
               onClick={(e) => {
                 e.preventDefault();
-
-                // setOptionClass("ban");
                 db.collection("itemMap").doc(doc.id).set(
                   {
                     mapBan: true,
@@ -80,8 +72,6 @@ function SetThree() {
             <button
               onClick={(e) => {
                 e.preventDefault();
-
-                // setOptionClass("stick");
                 db.collection("itemMap").doc(doc.id).set(
                   {
                     mapStick: true,

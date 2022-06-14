@@ -9,7 +9,6 @@ import MainSetFour from "../components/MainSetFour";
 import Footer from "./Footer";
 
 function Main() {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="main">
       <div className="first-section">
