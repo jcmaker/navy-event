@@ -74,7 +74,6 @@ a {
   align-items: center;
   justify-content: space-around;
   width: 100vw;
-  /* height: 200vh; */
 }
 
 .admin--team-select {
@@ -198,7 +197,6 @@ button {
 
 .map-speed,
 .map-item {
-  /* background-color: #eee; */
   height: 34.375rem;
   width: 100%;
   display: flex;
@@ -249,21 +247,18 @@ button {
 }
 
 .stick {
-  /* background-color: purple; */
   color: white;
   display: flex;
   align-items: center;
   padding: 0.3125rem;
   height: 1.875rem;
   border: 0.1875rem solid blue;
-  /* background: #006ab7; */
   background: linear-gradient(to right, #1a2a6c, #333, #b21f1f);
   border-radius: 0.125rem;
 }
 
 .pick {
   background-color: #0575e6;
-
   color: white;
   display: flex;
   align-items: center;
@@ -339,10 +334,6 @@ button {
   width: 100%;
   margin-bottom: 5rem;
 }
-
-/* .main-team-section .red-team-box {
-  background-color: #fdeff9;
-} */
 
 .main-red-team {
   animation: fromLeft 0.6s ease-in-out;
@@ -468,12 +459,6 @@ button {
   width: 100%;
 }
 
-/* .main-map-section .map-list {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-} */
-
 .main-map-speed,
 .main-map-item {
   height: 90%;
@@ -546,7 +531,6 @@ button {
 */
 
 .footer {
-  /* margin-top: 2.5rem; */
   height: auto;
   width: 100vw;
   background-color: #006ab7;
@@ -590,12 +574,6 @@ button {
   width: 100%;
   max-width: 31.25rem;
 }
-
-/* .rule {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
 
 .about {
   width: 100%;
@@ -646,10 +624,8 @@ button {
   max-width: 37.5rem;
   background-color: #006ab7;
   border-radius: 1.25rem;
-  /* border: 0.0625rem solid var(--main-color); */
   display: flex;
   flex-direction: column;
-
   padding: 0.625rem;
 }
 

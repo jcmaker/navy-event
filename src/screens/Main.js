@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import MainRedTeam from "../components/MainRedTeam";
 import MainBlueTeam from "../components/MainBlueTeam";
 import MainMapList from "../components/MainMapList";
@@ -27,7 +27,6 @@ function Main() {
         <MainSetThree />
         <MainSetFour />
       </div>
-
       <Footer />
     </div>
   );
