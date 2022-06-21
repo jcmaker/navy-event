@@ -27,6 +27,11 @@
   --blue-light: #65c7f7;
 }
 
+*::selection {
+  background-color: orange;
+  color: white;
+}
+
 *,
 *:before,
 *:after {

@@ -28,9 +28,6 @@ function SetThree() {
               e.preventDefault();
               db.collection("itemMap").doc(doc.id).set(
                 {
-                  mapPick: false,
-                  mapBan: false,
-                  mapStick: false,
                   optionClass3: "",
                 },
                 { merge: true }
@@ -46,7 +43,6 @@ function SetThree() {
                 e.preventDefault();
                 db.collection("itemMap").doc(doc.id).set(
                   {
-                    mapPick: true,
                     optionClass3: "pick",
                   },
                   { merge: true }
@@ -60,7 +56,6 @@ function SetThree() {
                 e.preventDefault();
                 db.collection("itemMap").doc(doc.id).set(
                   {
-                    mapBan: true,
                     optionClass3: "ban",
                   },
                   { merge: true }
@@ -74,7 +69,6 @@ function SetThree() {
                 e.preventDefault();
                 db.collection("itemMap").doc(doc.id).set(
                   {
-                    mapStick: true,
                     optionClass3: "stick",
                   },
                   { merge: true }

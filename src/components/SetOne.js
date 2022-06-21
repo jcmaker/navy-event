@@ -30,9 +30,6 @@ function SetOne() {
               e.preventDefault();
               db.collection("speedMap").doc(doc.id).set(
                 {
-                  mapPick: false,
-                  mapBan: false,
-                  mapStick: false,
                   optionClass1: "",
                 },
                 { merge: true }
@@ -47,7 +44,6 @@ function SetOne() {
                 e.preventDefault();
                 db.collection("speedMap").doc(doc.id).set(
                   {
-                    mapPick: true,
                     optionClass1: "pick",
                   },
                   { merge: true }
@@ -61,7 +57,6 @@ function SetOne() {
                 e.preventDefault();
                 db.collection("speedMap").doc(doc.id).set(
                   {
-                    mapBan: true,
                     optionClass1: "ban",
                   },
                   { merge: true }
@@ -75,7 +70,6 @@ function SetOne() {
                 e.preventDefault();
                 db.collection("speedMap").doc(doc.id).set(
                   {
-                    mapStick: true,
                     optionClass1: "stick",
                   },
                   { merge: true }
