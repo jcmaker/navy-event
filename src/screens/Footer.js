@@ -109,7 +109,7 @@ function Footer() {
         <br />
         <span>
           @Made By{" "}
-          <a href="https://github.com/jcmaker" target="_blank">
+          <a href="https://open.kakao.com/me/jcmaker" target="_blank">
             Navy_주녕
           </a>
         </span>

@@ -70,7 +70,7 @@ a {
 }
 
 .fine {
-  color: greenyellow;
+  color: rgb(9, 156, 9);
 }
 
 /* 
@@ -418,6 +418,8 @@ button {
   align-items: center;
   margin-top: 0.3125rem;
   margin-bottom: 0.3125rem;
+  height: auto;
+  min-height: 7.375rem;
 }
 
 .main-red-team-box,
@@ -439,6 +441,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: auto;
+  min-height: 7.375rem;
 }
 
 .main-blue-team h1 {
