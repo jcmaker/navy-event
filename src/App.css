@@ -65,6 +65,14 @@ a {
   background-color: var(--bg-color);
 }
 
+.warn {
+  color: red;
+}
+
+.fine {
+  color: greenyellow;
+}
+
 /* 
 ###################################################
 
@@ -132,9 +140,9 @@ a {
 
 button {
   background-color: #e2e2e2;
-  border-radius: 10px;
-  width: 45px;
-  height: 20px;
+  border-radius: 0.625rem;
+  width: 2.8125rem;
+  height: 1.25rem;
 }
 
 .line-up {
@@ -202,7 +210,8 @@ button {
 
 .map-speed,
 .map-item {
-  height: 34.375rem;
+  min-height: 30rem;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -219,6 +228,7 @@ button {
   justify-content: space-between;
   align-items: center;
   border-bottom: 0.125rem solid white;
+  margin: 0.1875rem 0rem;
 }
 
 .set-one {
@@ -226,7 +236,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 46.875rem;
+  height: auto;
   border: 0.25rem solid black;
   padding: 0.625rem;
 }
@@ -239,6 +249,7 @@ button {
   justify-content: space-between;
   align-items: center;
   border-bottom: 0.125rem solid #006ab7;
+  margin: 0.1875rem 0rem;
 }
 
 .set-list-btn {
@@ -257,7 +268,6 @@ button {
   align-items: center;
   padding: 0.3125rem;
   height: 1.875rem;
-  border: 0.1875rem solid blue;
   background: linear-gradient(to right, #1a2a6c, #333, #b21f1f);
   border-radius: 0.125rem;
 }
@@ -269,7 +279,7 @@ button {
   align-items: center;
   text-align: center;
   padding: 0.3125rem;
-  height: 100%;
+  height: 1.875rem;
   border-radius: 0.125rem;
 }
 
@@ -302,6 +312,7 @@ button {
 .first-section {
   width: 100%;
   height: 100vh;
+  min-height: 36.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -309,7 +320,7 @@ button {
 }
 
 .logo {
-  animation: fromTop 0.5s ease-in-out;
+  animation: fromTop 0.8s ease-in-out;
   animation-delay: 0.1s;
   animation-fill-mode: both;
 }
@@ -341,22 +352,22 @@ button {
 }
 
 .main-red-team {
-  animation: fromLeft 0.6s ease-in-out;
+  animation: fromLeft 0.7s ease-in-out;
   animation-delay: 0.2s;
 }
 
 .main-red-team-box {
-  animation: fromLeft 0.6s ease-in-out;
+  animation: fromLeft 0.7s ease-in-out;
   animation-delay: 0.3s;
 }
 
 .main-blue-team-box {
-  animation: fromRight 0.6s ease-in-out;
+  animation: fromRight 0.7s ease-in-out;
   animation-delay: 0.3s;
 }
 
 .main-blue-team {
-  animation: fromRight 0.6s ease-in-out;
+  animation: fromRight 0.7s ease-in-out;
   animation-delay: 0.2s;
 }
 
@@ -415,7 +426,8 @@ button {
   width: 100%;
 }
 
-.main-red-team-box .main-user-list {
+.main-red-team-box .main-user-list,
+.anyOneRed {
   color: #ff416c;
   font-weight: bold;
   margin-top: 0.25rem;
@@ -436,7 +448,8 @@ button {
   -webkit-text-stroke: 0.125rem var(--blue-strong);
 }
 
-.main-blue-team-box .main-user-list {
+.main-blue-team-box .main-user-list,
+.anyOneBlue {
   color: #00b4db;
   font-weight: bold;
   margin-top: 0.25rem;
@@ -447,8 +460,9 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  height: 30rem;
+  min-height: 30rem;
+  height: auto;
+  padding: 0.625rem 0rem;
 }
 
 .main-map-list h2,
@@ -473,14 +487,24 @@ button {
   align-items: center;
 }
 
+.main-item-list,
+.main-speed-list {
+  margin: 0.25rem 0rem;
+}
+
 .main-set-one {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 12.5rem;
-  padding-top: 0.3125rem;
+  min-height: 12.5rem;
+  height: auto;
+  padding: 0.625rem 0rem;
+}
+
+.main-set-one:nth-child(5) > .cross {
+  display: none;
 }
 
 .main-set-grid {
@@ -523,7 +547,6 @@ button {
 .none-option {
   opacity: 0.5;
   color: gray;
-
   border: 0.0625rem solid #eee;
 }
 
@@ -560,14 +583,25 @@ button {
 }
 
 .footer-header,
-.footer-body,
-.footer-last {
+.footer-body {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
 
+.footer h2 {
+  border-bottom: 0.096rem solid orange;
+}
+
 .footer-last {
-  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 1.25rem;
+  z-index: 1000;
+  background-color: #006ab7;
 }
 
 .footer-body {
@@ -614,7 +648,6 @@ button {
   bottom: 0;
   left: 0;
   width: 100%;
-
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(0.3125rem);
   display: flex;
@@ -628,7 +661,7 @@ button {
   width: 80%;
   max-width: 37.5rem;
   background-color: #006ab7;
-  border-radius: 1.25rem;
+  border-radius: 0.625rem;
   display: flex;
   flex-direction: column;
   padding: 0.625rem;

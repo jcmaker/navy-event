@@ -13,7 +13,7 @@ function Main() {
     <div className="main">
       <div className="first-section">
         <div className="logo">
-          <img alt="logo" src="./images/emblem.png" loading="lazy" />
+          <img alt="logo" src="./images/emblem.png" />
         </div>
         <div className="main-team-section">
           <MainRedTeam />

@@ -21,7 +21,8 @@ function MainSetThree() {
 
   return (
     <div className="main-set-one">
-      <h2>set 3</h2>
+      <h2>SET 3</h2>
+      <br />
       <div className="main-set-grid">
         {getItemMap.map((doc) => (
           <div className="main-set-one-list">
@@ -35,6 +36,7 @@ function MainSetThree() {
           </div>
         ))}
       </div>
+      <br />
       <div className="cross"></div>
     </div>
   );

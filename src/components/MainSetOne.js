@@ -21,7 +21,8 @@ function MainSetOne() {
 
   return (
     <div className="main-set-one">
-      <h2>set 1</h2>
+      <h2>SET 1</h2>
+      <br />
       <div className="main-set-grid">
         {getSpeedMap.map((doc) => (
           <div className="main-set-one-list">
@@ -35,6 +36,7 @@ function MainSetOne() {
           </div>
         ))}
       </div>
+      <br />
       <div className="cross"></div>
     </div>
   );

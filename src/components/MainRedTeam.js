@@ -39,7 +39,7 @@ function MainRedTeam() {
           <h4>선발</h4>
           {bringRedLineUp.map((doc) => (
             <div className="main-user-list">
-              <span>{doc.userId}</span>
+              <span>{doc.userId !== null ? doc.userId : "플레이어"}</span>
             </div>
           ))}
         </div>
@@ -48,9 +48,10 @@ function MainRedTeam() {
           <h4>대기</h4>
           {bringRedWaiter.map((doc) => (
             <div className="main-user-list">
-              <span>{doc.userId}</span>
+              <span>{doc.userId !== null ? doc.userId : "플레이어"}</span>
             </div>
           ))}
+          <span className="anyOneRed">+ 아무나</span>
         </div>
       </div>
     </div>

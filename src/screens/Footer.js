@@ -27,12 +27,12 @@ function Footer() {
                 라운드 합산 점수가 동률인 경우 1위 팀 해당 라운드 승.
               </span>
             </div>
-            <div className="rule-container">
+            {/* <div className="rule-container">
               <span className="rule-title">트랙 선정</span>
               <span className="rule-text">
                 경기 시작 30분 전 진행된 밴픽에 따라 진행
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="about">
@@ -51,12 +51,12 @@ function Footer() {
                 [1라운드]▶︎[2라운드]▶︎[3라운드]▶︎[4라운드]▶︎[5라운드]
               </span>
             </div>
-            <div className="rule-container">
+            {/* <div className="rule-container">
               <span className="rule-title">트랙 선정</span>
               <span className="rule-text">
                 경기 시작 30분 전 진행된 밴픽에 따라 진행
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="about">
@@ -104,30 +104,6 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="about">
-          <h4>맵 밴픽</h4>
-          <div className="rule">
-            <div className="rule-container">
-              <span className="rule-title">스피드 전</span>
-              <span className="rule-text">
-                [고정맵] ▶︎ [1팀 픽] ▶︎ [2팀 밴] ▶︎ [1팀 밴] ▶︎ [2팀 픽] ▶︎ [1팀
-                픽] ▶︎ [2팀 픽]
-              </span>
-            </div>
-            <div className="rule-container">
-              <span className="rule-title">아이템 전</span>
-              <span className="rule-text">
-                [고정맵] ▶︎ [1팀 픽] ▶︎ [2팀 밴] ▶︎ [1팀 밴] ▶︎ [2팀 픽] ▶︎ [1팀
-                픽] ▶︎ [2팀 픽]
-              </span>
-            </div>
-            <div className="rule-container">
-              <span className="rule-text">
-                각 팀에서 대표를 뽑아 내전 진행 30분 전까지 밴픽 진행.
-              </span>
-            </div>
-          </div>
-        </div>
       </div>
       <div className="footer-last">
         <br />
@@ -137,6 +113,8 @@ function Footer() {
             Navy_주녕
           </a>
         </span>
+
+        <span>ver1.1.4-release</span>
       </div>
       <div className="openRule">
         {isOpen === true ? (
@@ -153,7 +131,6 @@ function Footer() {
           <img
             alt="show"
             src="./images/email.png"
-            loading="lazy"
             onClick={() => {
               setIsOpen(true);
             }}

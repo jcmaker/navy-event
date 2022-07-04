@@ -51,6 +51,7 @@ function MainBlueTeam() {
               <span>{doc.userId}</span>
             </div>
           ))}
+          <span className="anyOneBlue">+ 아무나</span>
         </div>
       </div>
     </div>

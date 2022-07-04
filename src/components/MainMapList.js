@@ -33,7 +33,10 @@ function MainMapList() {
   return (
     <div className="main-map-list">
       <div className="main-map-speed">
-        <h2>speed</h2>
+        <>
+          <h2>SPEED</h2>
+        </>
+        <br />
         {getSpeedMap.map((doc) => (
           <div className="main-speed-list">
             <span>{doc.mapId}</span>
@@ -42,7 +45,8 @@ function MainMapList() {
       </div>
 
       <div className="main-map-item">
-        <h2>item</h2>
+        <h2>ITEM</h2>
+        <br />
         {getItemMap.map((doc) => (
           <div className="main-item-list">
             <span>{doc.mapId}</span>

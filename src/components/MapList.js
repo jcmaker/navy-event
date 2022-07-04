@@ -39,12 +39,8 @@ function MapList() {
     db.collection("speedMap").add({
       mapId: speedMap,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      mapPick: false,
-      mapBan: false,
-      mapStick: false,
       optionClass1: "",
       optionClass2: "",
-
       optionClass4: "",
     });
     setSpeedMap("");
@@ -54,19 +50,19 @@ function MapList() {
     db.collection("itemMap").add({
       mapId: itemMap,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      mapPick: false,
-      mapBan: false,
-      mapStick: false,
-
       optionClass3: "",
     });
     setItemMap("");
   };
+  console.log(getSpeedMap.length);
   return (
     <div className="map-list">
       <h4>맵 목록</h4>
       <div className="map-speed">
         <h4>speed</h4>
+        <span className={getSpeedMap.length > 20 ? "warn" : "fine"}>
+          {getSpeedMap.length} / 20
+        </span>
         {getSpeedMap.map((doc) => (
           <div className="speed-list">
             <span>{doc.mapId}</span>
@@ -92,13 +88,16 @@ function MapList() {
             }}
             required
           />
-          <button onClick={uploadSpeedMap}>추가하기</button>
+          <button onClick={uploadSpeedMap}>추가</button>
         </form>
       </div>
 
       <div className="cross"></div>
       <div className="map-item">
         <h4>item</h4>
+        <span className={getItemMap.length > 16 ? "warn" : "fine"}>
+          {getItemMap.length} / 16
+        </span>
         {getItemMap.map((doc) => (
           <div className="item-list">
             <span>{doc.mapId}</span>
@@ -124,7 +123,7 @@ function MapList() {
             }}
             required
           />
-          <button onClick={uploadItemMap}>추가하기</button>
+          <button onClick={uploadItemMap}>추가</button>
         </form>
       </div>
     </div>
