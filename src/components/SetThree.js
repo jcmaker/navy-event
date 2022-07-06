@@ -39,17 +39,32 @@ function SetThree() {
           </span>
           <div className="set-list-btn">
             <button
+              style={{ backgroundColor: "#0575e6", color: "#fff" }}
               onClick={(e) => {
                 e.preventDefault();
                 db.collection("itemMap").doc(doc.id).set(
                   {
-                    optionClass3: "pick",
+                    optionClass3: "pick-blue",
                   },
                   { merge: true }
                 );
               }}
             >
-              PICK
+              픽
+            </button>
+            <button
+              style={{ backgroundColor: "#ff416c", color: "#fff" }}
+              onClick={(e) => {
+                e.preventDefault();
+                db.collection("itemMap").doc(doc.id).set(
+                  {
+                    optionClass3: "pick-red",
+                  },
+                  { merge: true }
+                );
+              }}
+            >
+              픽
             </button>
             <button
               onClick={(e) => {
@@ -62,7 +77,7 @@ function SetThree() {
                 );
               }}
             >
-              BAN
+              벤
             </button>
             <button
               onClick={(e) => {

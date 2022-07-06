@@ -25,7 +25,13 @@ function MainSetThree() {
       <br />
       <div className="main-set-grid">
         {getItemMap.map((doc) => (
-          <div className="main-set-one-list">
+          <div
+            className={`main-set-one-list ${
+              doc.optionClass3 === ""
+                ? "main-none-option"
+                : "main-" + doc.optionClass3
+            }`}
+          >
             <span
               className={
                 doc.optionClass3 === "" ? "none-option" : doc.optionClass3

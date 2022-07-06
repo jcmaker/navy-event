@@ -114,7 +114,7 @@ function Footer() {
           </a>
         </span>
 
-        <span>ver1.1.4-release</span>
+        <span>ver1.2.4-release</span>
       </div>
       <div className="openRule">
         {isOpen === true ? (

@@ -40,17 +40,32 @@ function SetFour() {
           </span>
           <div className="set-list-btn">
             <button
+              style={{ backgroundColor: "#0575e6", color: "#fff" }}
               onClick={(e) => {
                 e.preventDefault();
                 db.collection("speedMap").doc(doc.id).set(
                   {
-                    optionClass4: "pick",
+                    optionClass4: "pick-blue",
                   },
                   { merge: true }
                 );
               }}
             >
-              PICK
+              픽
+            </button>
+            <button
+              style={{ backgroundColor: "#ff416c", color: "#fff" }}
+              onClick={(e) => {
+                e.preventDefault();
+                db.collection("speedMap").doc(doc.id).set(
+                  {
+                    optionClass4: "pick-red",
+                  },
+                  { merge: true }
+                );
+              }}
+            >
+              픽
             </button>
             <button
               onClick={(e) => {
@@ -63,7 +78,7 @@ function SetFour() {
                 );
               }}
             >
-              BAN
+              벤
             </button>
             <button
               onClick={(e) => {

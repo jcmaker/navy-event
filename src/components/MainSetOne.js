@@ -25,7 +25,13 @@ function MainSetOne() {
       <br />
       <div className="main-set-grid">
         {getSpeedMap.map((doc) => (
-          <div className="main-set-one-list">
+          <div
+            className={`main-set-one-list ${
+              doc.optionClass1 === ""
+                ? "main-none-option"
+                : "main-" + doc.optionClass1
+            }`}
+          >
             <span
               className={
                 doc.optionClass1 === "" ? "none-option" : doc.optionClass1
