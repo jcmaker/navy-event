@@ -24,6 +24,7 @@ function MapSection() {
         </span>
         <span>컴퓨터로 관리하시는 분들을 위해 UI 개선 했습니다.</span>
         <span>밴픽 활용 안하신다면 '블루' 픽을 이용해주세요</span>
+        <span>언제든지 불편사항 있으면 알려주세요</span>
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import MainSetTwo from "../components/MainSetTwo";
 import MainSetThree from "../components/MainSetThree";
 import MainSetFour from "../components/MainSetFour";
 import Footer from "./Footer";
+import MainEventDate from "../components/MainEventDate";
 
 function Main() {
   return (
@@ -20,6 +21,7 @@ function Main() {
           <MainBlueTeam />
         </div>
       </div>
+      <MainEventDate />
       <div className="main-map-section">
         <MainMapList />
         <MainSetOne />
