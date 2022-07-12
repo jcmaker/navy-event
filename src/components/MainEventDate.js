@@ -21,11 +21,12 @@ function MainEventDate() {
 
   return (
     <div className="main-event-date">
+      테스트 진행중
       {getDateValue.map((doc) => (
         <MainDateCalc
           date={doc.dateValue}
           id={doc.id}
-          timetime={doc.timeValue}
+          clocktime={doc.timeValue}
         />
       ))}
     </div>

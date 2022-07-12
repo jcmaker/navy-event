@@ -193,16 +193,16 @@ button {
 }
 
 .event-date-form {
-  width: 50%;
+  width: 80%;
   height: 1.875rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
 .event-date-form > button {
-  border-radius: 0.125rem;
+  border-radius: 0rem;
   height: 1.575rem;
 }
 
@@ -212,6 +212,7 @@ input[type="time"] {
   min-height: 1.25rem;
   border: 0.0625rem solid #ddd;
   font-size: 0.95rem;
+  margin: 0rem 0.125rem;
 }
 
 input[type="date"]::-webkit-clear-button,
@@ -239,36 +240,38 @@ input[type="date"]::-webkit-inner-spin-button {
 }
 
 .main-event-date {
-  min-height: 120px;
+  min-height: 7.5rem;
   height: auto;
   width: 100%;
   background-color: #323232;
-  border-bottom: 1px solid #b8b8b8;
+  border-bottom: 0.0625rem solid #b8b8b8;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0px;
+  padding: 1rem 0rem;
 }
 
 .media-countdown-box {
-  width: 60px;
-  height: 60px;
-  border: 5px solid #3f3f3f;
+  width: 3.75rem;
+  height: 3.75rem;
+  border: 0.3125rem solid #3f3f3f;
+  border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 4px;
-  box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.8);
+  margin: 0.25rem;
+  box-shadow: 0 0.155rem 0.155rem 0rem rgba(10, 10, 10, 0.8);
 }
 
 .media-countdown-time {
   background-color: #fafafa;
   width: 100%;
-  height: 40px;
+  height: 2.5rem;
   text-align: center;
   color: #3f3f3f;
+  border-radius: 0.125rem;
 }
 
 .media-countdown-span {
@@ -425,12 +428,13 @@ input[type="date"]::-webkit-inner-spin-button {
 
 .ban {
   background-color: #666;
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
   padding: 0.3125rem;
   height: 1.875rem;
   border-radius: 0.125rem;
+  text-decoration: line-through #c40000;
 }
 
 /* 
