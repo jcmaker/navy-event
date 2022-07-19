@@ -1,23 +1,5 @@
-/* 
-###################################################
-
-
-                    0. Root
-                    1. Admin
-                    2. userlist
-                    3. Map
-                    4. Main
-                    5. 
-                    6. 
-                    7. Footer
-
-                            - Made By Justin Cho -
-###################################################
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jua&family=Rubik&display=swap");
-
 :root {
   --navy-color: #006ab7;
   --bg-color: #fafafa;
@@ -26,12 +8,10 @@
   --blue-strong: #00b4db;
   --blue-light: #65c7f7;
 }
-
 *::selection {
-  background-color: orange;
-  color: white;
+  background-color: #ffa500;
+  color: #ffffff;
 }
-
 *,
 *:before,
 *:after {
@@ -47,32 +27,26 @@
   font-family: "Rubik", "Jua", sans-serif;
   vertical-align: baseline;
   background: transparent;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
-
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
+  display: none; 
 }
-
 a {
   text-decoration: none;
 }
-
 .app {
   height: 100vh;
   width: 100vw;
   background-color: var(--bg-color);
 }
-
 .warn {
-  color: red;
+  color: #ff0000;
 }
-
 .fine {
-  color: rgb(9, 156, 9);
+  color: #099c09;
 }
-
 /* 
 ###################################################
 
@@ -85,10 +59,10 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100vw;
   padding: 0.625rem 0.25rem;
-  background-color: #ececec;
+  background-color: #dcdcdc;
 }
 
 .admin--team-select {
@@ -102,6 +76,7 @@ a {
   box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);
   background-color: #fafafa;
   border-radius: 1.25rem;
+
 }
 
 .red-team,
@@ -325,8 +300,8 @@ input[type="date"]::-webkit-inner-spin-button {
   align-items: center;
   background-color: #fafafa;
   box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);
-  border-radius: 20px;
-  padding: 12px 0px;
+  border-radius: 1.25rem;
+  padding: 0.75rem 0rem;
 }
 
 .map-list {
@@ -411,7 +386,7 @@ input[type="date"]::-webkit-inner-spin-button {
 }
 
 .pick-blue,
-.pick-red {
+.pick-red, .ban {
   background-color: #0575e6;
   color: white;
   display: flex;
@@ -429,11 +404,6 @@ input[type="date"]::-webkit-inner-spin-button {
 .ban {
   background-color: #666;
   color: rgba(255, 255, 255, 0.5);
-  display: flex;
-  align-items: center;
-  padding: 0.3125rem;
-  height: 1.875rem;
-  border-radius: 0.125rem;
   text-decoration: line-through #c40000;
 }
 
@@ -460,12 +430,12 @@ input[type="date"]::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to bottom right, red, #111, blue);
+  background: linear-gradient(to bottom right, #ff0000, #111, #0000ff);
 }
 
 .logo {
-  animation: fromTop 0.8s ease-in-out;
-  animation-delay: 0.1s;
+  animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-delay: 0.2s;
   animation-fill-mode: both;
 }
 
@@ -475,14 +445,16 @@ input[type="date"]::-webkit-inner-spin-button {
   object-fit: contain;
 }
 
-@keyframes fromTop {
-  from {
+
+@keyframes slide-in-bck-center {
+  0% {
+            transform: translateZ(56.25rem) scale(6);
     opacity: 0;
-    transform: translateY(-6.25rem) scale(0.5);
   }
-  to {
+  100% {
+
+            transform: translateZ(0) scale(1);
     opacity: 1;
-    transform: translateY(0) scale(1);
   }
 }
 
@@ -495,22 +467,12 @@ input[type="date"]::-webkit-inner-spin-button {
   margin-bottom: 5rem;
 }
 
-.main-red-team {
+.main-red-team, .main-red-team-box {
   animation: fromLeft 0.7s ease-in-out;
   animation-delay: 0.2s;
 }
 
-.main-red-team-box {
-  animation: fromLeft 0.7s ease-in-out;
-  animation-delay: 0.3s;
-}
-
-.main-blue-team-box {
-  animation: fromRight 0.7s ease-in-out;
-  animation-delay: 0.3s;
-}
-
-.main-blue-team {
+.main-blue-team, .main-blue-team-box {
   animation: fromRight 0.7s ease-in-out;
   animation-delay: 0.2s;
 }
@@ -544,7 +506,7 @@ input[type="date"]::-webkit-inner-spin-button {
   width: 6.875rem;
 }
 
-.main-red-team h1 {
+.main-red-team h1, .main-blue-team h1 {
   font-size: 2.5rem;
   font-weight: bold;
   color: white;
@@ -590,9 +552,6 @@ input[type="date"]::-webkit-inner-spin-button {
 }
 
 .main-blue-team h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: white;
   -webkit-text-stroke: 0.125rem var(--blue-strong);
 }
 
@@ -701,7 +660,7 @@ input[type="date"]::-webkit-inner-spin-button {
 
 .none-option {
   opacity: 0.5;
-  color: gray;
+  color: #818181;
   border: 0.0625rem solid #eee;
 }
 
@@ -729,12 +688,8 @@ input[type="date"]::-webkit-inner-spin-button {
   color: #fff;
 }
 .footer a:hover,
-.footer a:focus {
-  color: orange;
-}
-
-.footer h4 {
-  color: orange;
+.footer a:focus, .footer h4 {
+  color: #ffa500;
 }
 
 .footer-header,
@@ -744,7 +699,7 @@ input[type="date"]::-webkit-inner-spin-button {
 }
 
 .footer h2 {
-  border-bottom: 0.096rem solid orange;
+  border-bottom: 0.096rem solid #ffa500;
 }
 
 .footer-last {
@@ -796,7 +751,7 @@ input[type="date"]::-webkit-inner-spin-button {
   flex: 1;
 }
 
-.modal {
+.modal{
   position: fixed;
   top: 0;
   right: 0;
@@ -820,6 +775,18 @@ input[type="date"]::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   padding: 0.625rem;
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-delay: 0.2s;
+}
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .modal p {
@@ -838,7 +805,7 @@ input[type="date"]::-webkit-inner-spin-button {
 }
 
 .modal-header h5 {
-  color: orange;
+  color: #ffa500;
 }
 
 .inquiry {
@@ -868,7 +835,7 @@ input[type="date"]::-webkit-inner-spin-button {
     box-shadow: #2f80ed 0 0 0 0;
   }
   75% {
-    box-shadow: #2f80ed00 0 0 0 0.875rem;
+    box-shadow: #2f80ed00 0 0 0 0.575rem;
   }
 }
 
@@ -887,7 +854,7 @@ input[type="date"]::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  color: gray;
+  color: #808080;
 }
 
 .admin-footer span {
@@ -922,7 +889,7 @@ code {
 }
 
 .no-match a {
-  background-color: Blue;
+  background-color: #0000ff;
   width: 10rem;
   height: 1.875rem;
   display: flex;
