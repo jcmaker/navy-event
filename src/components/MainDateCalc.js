@@ -46,7 +46,7 @@ function MainDateCalc({ date, clocktime }) {
         setTime("내전까지 ⏳");
       }
     }, 1000);
-  }, []);
+  });
   return (
     <div className="date-calc">
       <span>{time}</span>
@@ -64,19 +64,19 @@ function MainDateCalc({ date, clocktime }) {
               ? `${dayTime === 1 ? hourTime + 24 : `0${hourTime}`}`
               : `${dayTime === 1 ? hourTime + 24 : hourTime}`}
           </span>
-          <span className="media-countdown-span">Hr</span>
+          <span className="media-countdown-span">Hours</span>
         </div>
         <div className="media-countdown-box">
           <span className="media-countdown-time">
             {minuteTime < 10 ? `0${minuteTime}` : minuteTime}
           </span>
-          <span className="media-countdown-span">Min</span>
+          <span className="media-countdown-span">Minutes</span>
         </div>
         <div className="media-countdown-box">
           <span className="media-countdown-time">
             {secondTime < 10 ? `0${secondTime}` : secondTime}
           </span>
-          <span className="media-countdown-span">S</span>
+          <span className="media-countdown-span">Seconds</span>
         </div>
       </div>
     </div>

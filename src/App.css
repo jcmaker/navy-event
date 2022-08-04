@@ -36,6 +36,13 @@ body::-webkit-scrollbar {
 a {
   text-decoration: none;
 }
+ins {
+  background: var(--navy-color);
+  text-decoration: none;
+  color: #fff;
+  padding: 0.125rem;
+  border-radius: 0.1875rem;
+}
 .app {
   height: 100vh;
   width: 100vw;
@@ -49,12 +56,9 @@ a {
 }
 /* 
 ###################################################
-
                       admin
-
 ###################################################
 */
-
 .admin {
   display: flex;
   flex-direction: column;
@@ -64,7 +68,6 @@ a {
   padding: 0.625rem 0.25rem;
   background-color: #dcdcdc;
 }
-
 .admin--team-select {
   display: flex;
   flex-direction: row;
@@ -76,15 +79,13 @@ a {
   box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);
   background-color: #fafafa;
   border-radius: 1.25rem;
-
+  margin-bottom:1.7rem;
 }
-
 .red-team,
 .blue-team {
   width: 45%;
   height: 37.5rem;
 }
-
 .red-team h4,
 .red-team h1 {
   color: var(--red-strong);
@@ -93,7 +94,6 @@ a {
 .blue-team h1 {
   color: var(--blue-strong);
 }
-
 .red-team-box,
 .blue-team-box {
   height: 100%;
@@ -104,43 +104,35 @@ a {
   justify-content: space-around;
   align-items: center;
 }
-
 .red-team-box {
   border: 0.0625rem solid var(--red-strong);
 }
 .blue-team-box {
   border: 0.0625rem solid var(--blue-strong);
 }
-
 .admin-form {
   width: 90%;
 }
-
 .form-input {
   border-bottom: 0.16rem solid gray;
   width: 80%;
 }
-
 button {
   background-color: #e2e2e2;
   border-radius: 0.625rem;
   width: 2.8125rem;
   height: 1.25rem;
 }
-
 .line-up {
   flex: 1;
 }
-
 .cross {
   width: 100%;
   border: 0.0625rem solid #eee;
 }
-
 .waiter {
   flex: 0.8;
 }
-
 .waiter,
 .line-up {
   display: flex;
@@ -151,7 +143,6 @@ button {
   width: 100%;
   height: 100%;
 }
-
 .event-date {
   width: 95%;
   height: auto;
@@ -163,10 +154,9 @@ button {
   box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);
   background-color: #fafafa;
   border-radius: 1.25rem;
-  margin-bottom: 0.75rem;
+  margin: 1.7rem 0rem;
   padding: 0.5rem 0rem;
 }
-
 .event-date-form {
   width: 80%;
   height: 1.875rem;
@@ -175,12 +165,10 @@ button {
   justify-content: center;
   align-items: center;
 }
-
 .event-date-form > button {
   border-radius: 0rem;
   height: 1.575rem;
 }
-
 input[type="date"],
 input[type="time"] {
   position: relative;
@@ -189,12 +177,10 @@ input[type="time"] {
   font-size: 0.95rem;
   margin: 0rem 0.125rem;
 }
-
 input[type="date"]::-webkit-clear-button,
 input[type="date"]::-webkit-inner-spin-button {
   display: none;
 }
-
 .date-calc {
   width: 100%;
   display: flex;
@@ -209,11 +195,9 @@ input[type="date"]::-webkit-inner-spin-button {
   align-items: center;
   justify-content: center;
 }
-
 .date-calc > span {
   color: #fafafa;
 }
-
 .main-event-date {
   min-height: 7.5rem;
   height: auto;
@@ -226,9 +210,8 @@ input[type="date"]::-webkit-inner-spin-button {
   align-items: center;
   padding: 1rem 0rem;
 }
-
 .media-countdown-box {
-  width: 3.75rem;
+  width: 4.45rem;
   height: 3.75rem;
   border: 0.3125rem solid #3f3f3f;
   border-radius: 0.25rem;
@@ -236,10 +219,9 @@ input[type="date"]::-webkit-inner-spin-button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0.25rem;
+  margin: 0.35rem;
   box-shadow: 0 0.155rem 0.155rem 0rem rgba(10, 10, 10, 0.8);
 }
-
 .media-countdown-time {
   background-color: #fafafa;
   width: 100%;
@@ -248,7 +230,6 @@ input[type="date"]::-webkit-inner-spin-button {
   color: #3f3f3f;
   border-radius: 0.125rem;
 }
-
 .media-countdown-span {
   background-color: #3f3f3f;
   width: 100%;
@@ -261,12 +242,9 @@ input[type="date"]::-webkit-inner-spin-button {
 }
 /* 
 ###################################################
-
                       userlist
-
 ###################################################
 */
-
 .user-list {
   width: 9.25rem;
   height: 2.55rem;
@@ -277,7 +255,6 @@ input[type="date"]::-webkit-inner-spin-button {
   align-items: center;
   transition: box-shadow 0.3s;
 }
-
 .user-list:hover,
 .speed-list:hover,
 .item-list:hover {
@@ -286,9 +263,7 @@ input[type="date"]::-webkit-inner-spin-button {
 
 /* 
 ###################################################
-
                       map
-
 ###################################################
 */
 
@@ -302,6 +277,7 @@ input[type="date"]::-webkit-inner-spin-button {
   box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);
   border-radius: 1.25rem;
   padding: 0.75rem 0rem;
+  margin-bottom: 1.7rem;
 }
 
 .map-list {
@@ -320,7 +296,7 @@ input[type="date"]::-webkit-inner-spin-button {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 0.75rem;
+  margin: 1.7rem 0rem;
 }
 
 .speed-list,
@@ -347,7 +323,7 @@ input[type="date"]::-webkit-inner-spin-button {
   box-shadow: 0.25rem 0.25rem 0.375rem #cecece,
     -0.125rem -0.125rem 0.1875rem rgb(241, 241, 241);
   padding: 0.625rem;
-  margin-bottom: 20px;
+  margin: 1.5rem 0rem;
 }
 
 .set-list {
@@ -409,9 +385,7 @@ input[type="date"]::-webkit-inner-spin-button {
 
 /* 
 ###################################################
-
                       main
-
 ###################################################
 */
 
@@ -448,12 +422,11 @@ input[type="date"]::-webkit-inner-spin-button {
 
 @keyframes slide-in-bck-center {
   0% {
-            transform: translateZ(56.25rem) scale(6);
+    transform: translateZ(56.25rem) scale(6);
     opacity: 0;
   }
   100% {
-
-            transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1);
     opacity: 1;
   }
 }
@@ -569,7 +542,8 @@ input[type="date"]::-webkit-inner-spin-button {
   justify-content: space-around;
   min-height: 30rem;
   height: auto;
-  padding: 0.625rem 0rem;
+  padding: 1rem 0rem;
+  margin-bottom: 0.625rem;
 }
 
 .main-map-list h2,
@@ -663,15 +637,11 @@ input[type="date"]::-webkit-inner-spin-button {
   color: #818181;
   border: 0.0625rem solid #eee;
 }
-
 /* 
 ###################################################
-
                       footer
-
 ###################################################
 */
-
 .footer {
   height: auto;
   width: 100vw;
@@ -726,7 +696,7 @@ input[type="date"]::-webkit-inner-spin-button {
 
 .about {
   width: 100%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .rule-container {
@@ -749,6 +719,7 @@ input[type="date"]::-webkit-inner-spin-button {
 
 .rule-text {
   flex: 1;
+  opacity: 0.85;
 }
 
 .modal{
@@ -758,8 +729,7 @@ input[type="date"]::-webkit-inner-spin-button {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(0.3125rem);
+  backdrop-filter: blur(0.3125rem); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -770,11 +740,11 @@ input[type="date"]::-webkit-inner-spin-button {
 .modal-card {
   width: 80%;
   max-width: 37.5rem;
-  background-color: #006ab7;
-  border-radius: 0.625rem;
+  background: #fff;
   display: flex;
   flex-direction: column;
-  padding: 0.625rem;
+  padding: 0.925rem 0.5rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.8);
   animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation-delay: 0.2s;
 }
@@ -789,12 +759,38 @@ input[type="date"]::-webkit-inner-spin-button {
   }
 }
 
+.modal-card:before, .modal-card:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.modal-card:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+.modal-card:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.4deg);
+}
+
 .modal p {
-  color: #fafafa;
+  color: #2e2e2e;
+  margin: 10px 0px;
+  font-size: small;
 }
 
 .modal h1 {
-  color: #fff;
+  color: #333;
+  font-weight:100;
+
 }
 
 .modal-header {
@@ -804,7 +800,7 @@ input[type="date"]::-webkit-inner-spin-button {
   margin-bottom: 1.25rem;
 }
 
-.modal-header h5 {
+.modal-header h5{
   color: #ffa500;
 }
 
@@ -812,6 +808,22 @@ input[type="date"]::-webkit-inner-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  height:30px;
+}
+
+.inquiry .address{
+background-color: #ffa500;
+padding:0.125rem 0.125rem;
+border-radius:0.125rem;
+display: flex;
+align-items: center;
+justify-content:center;
+height:30px;
+}
+
+.inquiry .address:hover{
+  background-color: transparent;
+  color: #ffa500;
 }
 
 .openRule {
@@ -862,9 +874,7 @@ input[type="date"]::-webkit-inner-spin-button {
 }
 /* 
 ###################################################
-
                       No-Match
-
 ###################################################
 */
 

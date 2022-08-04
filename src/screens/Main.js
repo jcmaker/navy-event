@@ -14,7 +14,7 @@ function Main() {
     <div className="main">
       <div className="first-section">
         <div className="logo">
-          <img alt="logo" src="./images/emblem.png" />
+          <img alt="logo" src="./images/nvlg.png" />
         </div>
         <div className="main-team-section">
           <MainRedTeam />

@@ -27,12 +27,6 @@ function Footer() {
                 라운드 합산 점수가 동률인 경우 1위 팀 해당 라운드 승.
               </span>
             </div>
-            {/* <div className="rule-container">
-              <span className="rule-title">트랙 선정</span>
-              <span className="rule-text">
-                경기 시작 30분 전 진행된 밴픽에 따라 진행
-              </span>
-            </div> */}
           </div>
         </div>
         <div className="about">
@@ -51,12 +45,6 @@ function Footer() {
                 [1라운드]▶︎[2라운드]▶︎[3라운드]▶︎[4라운드]▶︎[5라운드]
               </span>
             </div>
-            {/* <div className="rule-container">
-              <span className="rule-title">트랙 선정</span>
-              <span className="rule-text">
-                경기 시작 30분 전 진행된 밴픽에 따라 진행
-              </span>
-            </div> */}
           </div>
         </div>
         <div className="about">
@@ -109,12 +97,12 @@ function Footer() {
         <br />
         <span>
           @Made By{" "}
-          <a href="https://open.kakao.com/me/jcmaker" target="_blank">
+          <a href="https://open.kakao.com/me/jcmaker" target="_blank" rel="noreferrer">
             Navy_주녕
           </a>
         </span>
 
-        <span>ver1.6.4-release</span>
+        <span>ver1.6.7-release</span>
       </div>
       <div className="openRule">
         {isOpen === true ? (
