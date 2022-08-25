@@ -5,9 +5,12 @@ import firebase from "firebase";
 function MapList() {
   const [speedMap, setSpeedMap] = useState("");
   const [itemMap, setItemMap] = useState("");
+  const [aceMap, setAceMap] = useState("");
 
   const [getSpeedMap, setGetSpeedMap] = useState([]);
   const [getItemMap, setGetItemMap] = useState([]);
+  const [getAceMap, setGetAceMap] = useState([]);
+
 
   useEffect(() => {
     db.collection("speedMap")
@@ -32,6 +35,17 @@ function MapList() {
           }))
         );
       });
+      db.collection("aceMap")
+          .orderBy("timestamp", "asc")
+          .onSnapshot((snapshot) => {
+            setGetAceMap(
+              snapshot.docs.map((doc) => ({
+                id: doc.id,
+                mapId: doc.mapId,
+                ...doc.data(),
+              }))
+            );
+          });
   }, []);
 
   const uploadSpeedMap = (e) => {
@@ -54,6 +68,15 @@ function MapList() {
     });
     setItemMap("");
   };
+  const uploadAceMap = (e) => {
+        e.preventDefault();
+        db.collection("aceMap").add({
+          mapId: aceMap,
+          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+          optionClassAce: "fix",
+        });
+        setAceMap("");
+      };
 
   const speedMapArr = [
     "빌리지 고가",
@@ -87,6 +110,7 @@ function MapList() {
     "사막 빙글빙글 공사장",
     "대저택 은밀한 지하실",
     "아이스 갈라진 빙산",
+    "아이스 설산 다운힐",
     "네모 산타의 비밀공간",
     "노르테유 익스프레스",
     "광산 꼬불꼬불 다운힐",
@@ -97,6 +121,8 @@ function MapList() {
     "브로디 비밀의 연구소",
     "신화 신들의 세계",
     "포레스트 지그재그",
+    "포레스트 오싹한 공중다리",
+    "포레스트 대관령",
     "님프 바다 신전의 비밀",
     "도검 야외 수련관",
     "메카닉 잊혀진 도시의 중심부",
@@ -125,6 +151,8 @@ function MapList() {
     "빌리지 시계탑",
     "동화 프레티온 목마",
   ];
+
+  console.log(getSpeedMap[2]);
 
   return (
     <div className="map-list">
@@ -173,7 +201,7 @@ function MapList() {
               <option value={x} />
             ))}
           </datalist>
-          <button onClick={uploadSpeedMap}>추가</button>
+          <button disabled={!speedMap.trim()} onClick={uploadSpeedMap}>추가</button>
         </form>
       </div>
 
@@ -220,7 +248,60 @@ function MapList() {
               <option value={x} />
             ))}
           </datalist>
-          <button onClick={uploadItemMap}>추가</button>
+          <button disabled={!itemMap.trim()} onClick={uploadItemMap}>추가</button>
+        </form>
+      </div>
+      <div className="cross"></div>
+      <div className="map-ace">
+        <div>
+          <h4>ace</h4>
+          <span
+            className={
+              getAceMap.length >= 1 || getAceMap.length <= 1
+                ? "warn"
+                : "fine"
+            }
+          >
+            {getAceMap.length} / 1
+          </span>
+        </div>
+        {getAceMap.map((doc) => (
+          <div className="ace-list">
+            <span>{doc.mapId}</span>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                db.collection("aceMap").doc(doc.id).delete();
+              }}
+            >
+              삭제
+            </button>
+          </div>
+        ))}
+
+        <form className="map-form ace-form">
+          <input
+            type="text"
+            className="form-input ace-input"
+            placeholder="스피드맵 입력하기"
+            value={aceMap}
+            onChange={(e) => {
+              setAceMap(e.target.value);
+            }}
+            required
+            list="ace-map"
+          />
+          <datalist id="ace-map">
+            {getSpeedMap.map((x) => (
+              <option value={x.mapId} />
+            ))}
+          </datalist>
+          {getAceMap.length >= 1 ? "" : <button onClick={uploadAceMap} disabled={!aceMap.trim()} className="ace-add">추가</button> }
+          <button disabled onClick={(e) => {
+            e.preventDefault();
+            setAceMap(getSpeedMap[Math.floor(Math.random() * getSpeedMap.length)].mapId);
+            alert(e.keyCode.which);
+          }} className="ace-rand">랜덤</button>
         </form>
       </div>
     </div>

@@ -4,11 +4,11 @@ import ModalScreen from "../components/ModalScreen";
 function Footer() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="footer">
+    <div className="footer di-fl-col">
       <div className="footer-header">
         <h2>진행 방식 안내</h2>
       </div>
-      <div className="footer-body">
+      <div className="footer-body di-fl-col">
         <div className="about">
           <h4>SET 1, 2, 4</h4>
           <div className="rule">
@@ -38,12 +38,12 @@ function Footer() {
             </div>
             <div className="rule-container">
               <span className="rule-title">경기 방식</span>
-              <span className="rule-text">
+              <p className="rule-text">
                 경기는 5라운드 3선승으로 진행되며, 특정 팀이 3승을 선취하는 경우
                 종료.
                 <br />
                 [1라운드]▶︎[2라운드]▶︎[3라운드]▶︎[4라운드]▶︎[5라운드]
-              </span>
+              </p>
             </div>
           </div>
         </div>
@@ -66,6 +66,15 @@ function Footer() {
               <span className="rule-text">
                 4세트 종료 후 추첨으로 맵을 뽑는다.
               </span>
+            </div>
+          </div>
+        </div>
+        <div className="about">
+          <h4>세팅</h4>
+          <div className="rule">
+            <div className="rule-container">
+              <span className="rule-title">세팅</span>
+              <span className="rule-text">공지 참고</span>
             </div>
           </div>
         </div>
@@ -93,16 +102,26 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer-last">
-        <br />
+      <div className="footer-last di-fl-row">
+        <div className="di-fl-col">
         <span>
           @Made By{" "}
-          <a href="https://open.kakao.com/me/jcmaker" target="_blank" rel="noreferrer">
+          <a href="https://open.kakao.com/me/jcmaker" target="_blank" rel="noreferrer" style={{color: "#ffa500"}}>
             Navy_주녕
           </a>
         </span>
-
-        <span>ver1.6.7-release</span>
+        <span>ver1.10.8</span>
+        </div>
+        <div className="di-fl-col">
+          <a className="span-link"  
+            href="https://open.kakao.com/o/gt4C7LJc"
+            target="_blank"
+            rel="noreferrer">친선문의</a>
+          <a className="span-link"  
+            href="https://navy-kartrider.web.app"
+            target="_blank"
+            rel="noreferrer">가입문의</a>
+        </div>
       </div>
       <div className="openRule">
         {isOpen === true ? (

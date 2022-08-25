@@ -1,5 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import "../style/NoMatch.css"
+
 
 function NoMatchScreen() {
   let location = useLocation();
@@ -13,14 +15,14 @@ function NoMatchScreen() {
       <code>{location.pathname}</code>
       <br />
       <br />
-      <a
+      <span
         onClick={(e) => {
           e.preventDefault();
           navigate("/");
         }}
       >
         홈 화면으로 돌아가기
-      </a>
+      </span>
     </div>
   );
 }

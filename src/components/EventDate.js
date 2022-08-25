@@ -53,7 +53,7 @@ function EventDate() {
           }}
           required
         />
-        <button onClick={uploadDate}>추가</button>
+        <button disabled={!dateValue.trim() || !timeValue.trim()} onClick={uploadDate}>추가</button>
       </form>
       {getDateValue.map((doc) => (
         <DateCalc date={doc.dateValue} id={doc.id} timetime={doc.timeValue} />

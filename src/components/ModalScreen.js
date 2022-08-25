@@ -10,8 +10,8 @@ function ModalScreen({ open, onClose }) {
           <h5>✶꼭 숙지 하고 참여 할 것을 당부드림✶</h5>
         </div>
         <div className="modal-body">
-          <p>- 내전 시작 시간은 꼭 지켜주세요 ( <ins>5분 전 접속</ins> )</p>
-          <p>- 내전은 친해지기 위함. <ins>매너</ins>는 꼭 지켜주세요.</p>
+          <p>- 리그 시작 시간은 꼭 지켜주세요 ( <ins>5분 전 접속</ins> )</p>
+          <p>- 서로 친해지기 위함. <ins>매너</ins>는 꼭 지켜주세요.</p>
           <p>
             - 이길때도 질때도 있는법. 승패도 중요하지만 <ins>즐기면서</ins> 게임 합시다.
           </p>

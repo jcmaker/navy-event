@@ -84,7 +84,7 @@ function SetThree() {
                 e.preventDefault();
                 db.collection("itemMap").doc(doc.id).set(
                   {
-                    optionClass3: "stick",
+                    optionClass3: "fix",
                   },
                   { merge: true }
                 );

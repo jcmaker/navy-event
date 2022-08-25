@@ -18,7 +18,6 @@ function MainSetOne() {
         );
       });
   }, []);
-
   return (
     <div className="main-set-one">
       <h2>SET 1</h2>

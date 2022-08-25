@@ -1,0 +1,37 @@
+/* 
+###################################################
+                      No-Match
+###################################################
+*/
+
+.no-match {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0.5rem;
+  }
+  
+  code {
+    font-size: 1.875rem;
+    color: #006ab7;
+  }
+  
+  .no-match img {
+    width: 18.75rem;
+    object-fit: contain;
+  }
+  
+  .no-match span {
+    background-color: #0000ff;
+    width: 10rem;
+    height: 1.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }

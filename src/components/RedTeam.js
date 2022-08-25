@@ -82,7 +82,7 @@ function RedTeam() {
               }}
               required
             />
-            <button onClick={uploadRedLineUp}>추가</button>
+            <button disabled={!redLineUp.trim()} onClick={uploadRedLineUp}>추가</button>
           </form>
         </div>
         <div className="cross"></div>
@@ -112,7 +112,7 @@ function RedTeam() {
                 setRedWaiter(e.target.value);
               }}
             />
-            <button onClick={uploadRedWaiter}>추가</button>
+            <button disabled={!redWaiter.trim()} onClick={uploadRedWaiter}>추가</button>
           </form>
         </div>
       </div>

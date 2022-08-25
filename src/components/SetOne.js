@@ -85,7 +85,7 @@ function SetOne() {
                 e.preventDefault();
                 db.collection("speedMap").doc(doc.id).set(
                   {
-                    optionClass1: "stick",
+                    optionClass1: "fix",
                   },
                   { merge: true }
                 );

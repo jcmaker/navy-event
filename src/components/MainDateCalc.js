@@ -36,21 +36,24 @@ function MainDateCalc({ date, clocktime }) {
       setSecondTime(seconds);
 
       if (distance < 0) {
-        clearInterval(x);
-        setTime("🏁 내전 진행됨 🏁");
+        setTime("🏁 리그 진행됨 🏁");
         setDayTime("0");
         setHourTime("0");
         setMinuteTime("0");
         setSecondTime("0");
+        clearInterval(x);
       } else {
-        setTime("내전까지 ⏳");
+        setTime("리그까지 ⏳");
       }
     }, 1000);
   });
   return (
     <div className="date-calc">
       <span>{time}</span>
-      <span>{date}</span>
+      <div className="di-fl-row algn-cntr" style={{color: '#fefefe'}}>
+      <span className="mgn-4">{date} /</span>
+      <span>{clocktime}</span>
+      </div>
       <div className="date-calc-time">
         <div className="media-countdown-box">
           <span className="media-countdown-time">

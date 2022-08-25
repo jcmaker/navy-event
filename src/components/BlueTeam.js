@@ -81,7 +81,7 @@ function BlueTeam() {
               }}
               required
             />
-            <button onClick={uploadBlueLineUp}>추가</button>
+            <button disabled={!blueLineUp.trim()} onClick={uploadBlueLineUp}>추가</button>
           </form>
         </div>
         <div className="cross"></div>
@@ -111,7 +111,7 @@ function BlueTeam() {
                 setBlueWaiter(e.target.value);
               }}
             />
-            <button onClick={uploadBlueWaiter}>추가</button>
+            <button disabled={!blueWaiter.trim()} onClick={uploadBlueWaiter}>추가</button>
           </form>
         </div>
       </div>

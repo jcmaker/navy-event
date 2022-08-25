@@ -4,6 +4,7 @@ import SetOne from "./SetOne";
 import SetTwo from "./SetTwo";
 import SetThree from "./SetThree";
 import SetFour from "./SetFour";
+import Ace from "./Ace";
 
 function MapSection() {
   return (
@@ -13,6 +14,7 @@ function MapSection() {
       <SetTwo />
       <SetThree />
       <SetFour />
+      <Ace />
       <br />
       <div className="admin-footer">
         <span>1. 내전 날짜 설정</span>

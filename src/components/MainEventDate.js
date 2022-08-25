@@ -12,7 +12,7 @@ function MainEventDate() {
           snapshot.docs.map((doc) => ({
             id: doc.id,
             dateValue: doc.dateValue,
-            time: doc.time,
+            timeValue: doc.time,
             ...doc.data(),
           }))
         );

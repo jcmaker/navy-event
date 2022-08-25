@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import db from "../fbManager";
 
-function MainBlueTeam() {
+function MainBlueTeam({teamName}) {
   const [bringBlueLineUp, setBringBlueLineUp] = useState([]);
   const [bringBlueWaiter, setBringBlueWaiter] = useState([]);
 
@@ -30,12 +30,13 @@ function MainBlueTeam() {
         );
       });
   }, []);
-
   return (
-    <div className="main-blue-team">
-      <h1>BLUE</h1>
+    <div className="main-blue-team di-fl-col">
+      {teamName.map((doc) => (
+        <h1>{doc.teamId}</h1>
+      ))}
       <div className="main-blue-team-box">
-        <div className="main-line-up">
+        <div className="main-line-up di-fl-col">
           <h4>선발</h4>
           {bringBlueLineUp.map((doc) => (
             <div className="main-user-list">
@@ -44,14 +45,14 @@ function MainBlueTeam() {
           ))}
         </div>
         <div className="cross"></div>
-        <div className="main-waiter">
+        <div className="main-waiter di-fl-col">
           <h4>대기</h4>
           {bringBlueWaiter.map((doc) => (
             <div className="main-user-list">
               <span>{doc.userId}</span>
             </div>
           ))}
-          <span className="anyOneBlue">+ 아무나</span>
+          {/* <span className="anyOneBlue">+ 아무나</span> */}
         </div>
       </div>
     </div>
