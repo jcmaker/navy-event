@@ -29,7 +29,7 @@
 - realtime database
 - useState, useEffect
 
-## Run Locally
+## Run Locally [ DOESN'T WORK ]
 
 Clone the project
 
