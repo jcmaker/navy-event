@@ -41,6 +41,7 @@ function Admin() {
     e.preventDefault();
     db.collection("redTeam").add({
       teamId: redName,
+      redWin: "none-win",
     });
     setRedName("");
   };
@@ -48,6 +49,7 @@ function Admin() {
     e.preventDefault();
     db.collection("blueTeam").add({
       teamId: blueName,
+      blueWin: "none-win",
     });
     setBlueName("");
   };
@@ -55,12 +57,36 @@ function Admin() {
   return (
     <>
       <div className="admin">
+        <div className="admtomn">
+      <span className="goback"
+        onClick={() => {
+          window.open("https://navy-event.web.app", "_self");
+        }}>MAIN</span>
+        </div>
         <EventDate />
         <div className="team-name">
-          <div className="di-fl-row mgn-4">
+          <div className="mgn-4 wd-80 team-name-sec">
           {bringRedName.map((doc) => (
-            <div className="user-list">
-              <span className="red-name">{doc.teamId}</span>
+            <div className="team-name-list wd-80">
+              <span className="red-name" onClick={(e) => {
+              e.preventDefault();
+              db.collection("redTeam").doc(doc.id).set(
+                {
+                  redWin: "none-win",
+                },
+                { merge: true }
+              );
+            }}>{doc.teamId}</span>
+            <div className="team-name-btn">
+            <button className="red-name" onClick={(e) => {
+              e.preventDefault();
+              db.collection("redTeam").doc(doc.id).set(
+                {
+                  redWin: "red-win",
+                },
+                { merge: true }
+              );
+            }}>승리</button>
               <button
                 onClick={(e) => {
                   e.preventDefault();
@@ -70,10 +96,29 @@ function Admin() {
                 삭제
               </button>
             </div>
+            </div>
           ))}
           {bringBlueName.map((doc) => (
-            <div className="user-list">
-              <span className="blue-name">{doc.teamId}</span>
+            <div className="team-name-list wd-80">
+              <span className="blue-name" onClick={(e) => {
+              e.preventDefault();
+              db.collection("blueTeam").doc(doc.id).set(
+                {
+                  blueWin: "none-win",
+                },
+                { merge: true }
+              );
+            }}>{doc.teamId}</span>
+            <div className="team-name-btn">
+            <button className="blue-name" onClick={(e) => {
+              e.preventDefault();
+              db.collection("blueTeam").doc(doc.id).set(
+                {
+                  blueWin: "blue-win",
+                },
+                { merge: true }
+              );
+            }}>승리</button>
               <button
                 onClick={(e) => {
                   e.preventDefault();
@@ -82,6 +127,7 @@ function Admin() {
               >
                 삭제
               </button>
+            </div>
             </div>
           ))}
           </div>
@@ -94,8 +140,9 @@ function Admin() {
               setBlueName(e.target.value);
             }}/>
             {bringBlueName.length >= 1 ? "" : <button disabled={!blueName.trim()} onClick={uploadBlueName}>추가</button> }
-            
           </form>
+          <div>
+          </div>
         </div>
         <div className="admin--team-select">
           <RedTeam />

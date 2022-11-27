@@ -22,7 +22,7 @@ function Ace() {
 <div className="set-one">
       <h4>set Ace</h4>
       {getAceMap.map((doc) => (
-        <div className="set-list">
+        <div className="set-list" id={doc.id}>
           <span
             className={doc.optionClassAce}
           >

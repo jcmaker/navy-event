@@ -36,19 +36,19 @@ function MainDateCalc({ date, clocktime }) {
       setSecondTime(seconds);
 
       if (distance < 0) {
-        setTime("🏁 리그 진행됨 🏁");
+        setTime(<div className="di-fl-row algn-cntr"><h3>리그 진행됨</h3> <img src="./images/dash.gif" alt="timer" className="dash-img"/></div>);
         setDayTime("0");
         setHourTime("0");
         setMinuteTime("0");
         setSecondTime("0");
         clearInterval(x);
       } else {
-        setTime("리그까지 ⏳");
+        setTime(<div className="di-fl-row algn-cntr"><h3>리그까지</h3> <img src="./images/timer.gif" alt="timer" className="time-img"/></div>);
       }
     }, 1000);
   });
   return (
-    <div className="date-calc">
+    <div className="main-date-calc">
       <span>{time}</span>
       <div className="di-fl-row algn-cntr" style={{color: '#fefefe'}}>
       <span className="mgn-4">{date} /</span>

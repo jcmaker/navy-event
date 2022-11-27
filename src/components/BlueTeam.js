@@ -57,7 +57,7 @@ function BlueTeam() {
         <div className="line-up">
           <h4>선발</h4>
           {bringBlueLineUp.map((doc) => (
-            <div className="user-list">
+            <div className="user-list" id={doc.id}>
               <span>{doc.userId}</span>
               <button
                 onClick={(e) => {

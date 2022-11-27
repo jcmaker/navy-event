@@ -34,7 +34,10 @@ function MainRedTeam({teamName}) {
   return (
     <div className="main-red-team di-fl-col">
       {teamName.map((doc) => (
-        <h1>{doc.teamId}</h1>
+         <>
+         <h1>{doc.teamId}</h1>
+         <span className={doc.redWin}>WIN</span>
+         </>
       ))}
       <div className="main-red-team-box">
         <div className="main-line-up di-fl-col">

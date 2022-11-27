@@ -8,7 +8,7 @@ function NoMatchScreen() {
   const navigate = useNavigate();
   return (
     <div className="no-match">
-      <img alt="404" src="./images/nopage.png" />
+      <img alt="404" src="./images/paper-boat.gif" />
       <h3>다음 주소의 페이지는 존재하지 않습니다.</h3>
       <h2>There Is No Match For</h2>
       <br />

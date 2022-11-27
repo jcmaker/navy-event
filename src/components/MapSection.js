@@ -18,9 +18,9 @@ function MapSection() {
       <br />
       <div className="admin-footer">
         <span>1. 내전 날짜 설정</span>
-
-        <span>2. 팀 명단</span>
-        <span>3.맵 리스트</span>
+        <span>2. 팀 명</span>
+        <span>2. 선수 명단</span>
+        <span>3. 맵 리스트</span>
         <span>4. 맵 밴픽</span>
         <br />
         <span>-날짜 설정에 오류가 생긴다면 새로고침 후 이용해주세요</span>

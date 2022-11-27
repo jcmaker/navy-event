@@ -27,6 +27,7 @@ function MainAce() {
       <div className="back-closeAce bdr-rds">To Be Announced</div>
         {getAceMap.map((doc) => (
           <div
+          id={doc.id}
             className={`ace-set bdr-rds main-set-one-list ${
               doc.optionClassAce === ""
                 ? "main-none-option"
@@ -38,7 +39,7 @@ function MainAce() {
               e.preventDefault();
               setAceOpen(true);
             }} className={aceOpen === true ? "revealAce bdr-rds" : "closeAce bdr-rds"}>눌러서 확인</div>
-            <span className="fix">{doc.mapId}</span>
+            <span className="fix shine-eff">{doc.mapId}</span>
           </div>
 ))}
       </div>

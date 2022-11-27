@@ -33,13 +33,16 @@ function MainBlueTeam({teamName}) {
   return (
     <div className="main-blue-team di-fl-col">
       {teamName.map((doc) => (
+        <>
         <h1>{doc.teamId}</h1>
+        <h4 className={doc.blueWin}>WIN</h4>
+        </>
       ))}
       <div className="main-blue-team-box">
         <div className="main-line-up di-fl-col">
           <h4>선발</h4>
           {bringBlueLineUp.map((doc) => (
-            <div className="main-user-list">
+            <div className="main-user-list" id={doc.id}>
               <span>{doc.userId}</span>
             </div>
           ))}
@@ -48,7 +51,7 @@ function MainBlueTeam({teamName}) {
         <div className="main-waiter di-fl-col">
           <h4>대기</h4>
           {bringBlueWaiter.map((doc) => (
-            <div className="main-user-list">
+            <div className="main-user-list" id={doc.id}>
               <span>{doc.userId}</span>
             </div>
           ))}

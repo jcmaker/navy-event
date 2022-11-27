@@ -23,6 +23,7 @@ function Main() {
           snapshot.docs.map((doc) => ({
             id: doc.id,
             teamId: doc.teamId,
+            redWin: doc.redWin,
             ...doc.data(),
           }))
         );
@@ -33,6 +34,7 @@ function Main() {
           snapshot.docs.map((doc) => ({
             id: doc.id,
             teamId: doc.teamId,
+            blueWin: doc.blueWin,
             ...doc.data(),
           }))
         );
@@ -43,7 +45,7 @@ function Main() {
     <div className="main di-fl-col">
       <div className="first-section di-fl-col">
         <div className="logo">
-          <img alt="logo" src="./images/navy_emblem.png" />
+          <img alt="logo" src="./images/navy_emblem.png" className="logo-img"/>
         </div>
         <div className="main-team-section">
           <MainRedTeam teamName={bringRedTeam}/>

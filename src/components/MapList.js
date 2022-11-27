@@ -187,7 +187,7 @@ function MapList() {
         <form className="map-form">
           <input
             type="text"
-            className="form-input"
+            className="form-input mg-tp"
             placeholder="스피드맵 입력하기"
             value={speedMap}
             onChange={(e) => {
@@ -201,7 +201,7 @@ function MapList() {
               <option value={x} />
             ))}
           </datalist>
-          <button disabled={!speedMap.trim()} onClick={uploadSpeedMap}>추가</button>
+          <button disabled={!speedMap.trim()} onClick={uploadSpeedMap} className="btn-sz">추가</button>
         </form>
       </div>
 
@@ -234,7 +234,7 @@ function MapList() {
         <form className="map-form">
           <input
             type="text"
-            className="form-input"
+            className="form-input mg-tp"
             placeholder="아이템맵 입력하기"
             value={itemMap}
             onChange={(e) => {
@@ -248,7 +248,7 @@ function MapList() {
               <option value={x} />
             ))}
           </datalist>
-          <button disabled={!itemMap.trim()} onClick={uploadItemMap}>추가</button>
+          <button disabled={!itemMap.trim()} onClick={uploadItemMap} className="btn-sz">추가</button>
         </form>
       </div>
       <div className="cross"></div>
@@ -296,11 +296,10 @@ function MapList() {
               <option value={x.mapId} />
             ))}
           </datalist>
-          {getAceMap.length >= 1 ? "" : <button onClick={uploadAceMap} disabled={!aceMap.trim()} className="ace-add">추가</button> }
-          <button disabled onClick={(e) => {
+          {getAceMap.length >= 1 ? "" : <button disabled={!aceMap.trim()} onClick={uploadAceMap} className="ace-add">추가</button> }
+          <button onClick={(e) => {
             e.preventDefault();
             setAceMap(getSpeedMap[Math.floor(Math.random() * getSpeedMap.length)].mapId);
-            alert(e.keyCode.which);
           }} className="ace-rand">랜덤</button>
         </form>
       </div>

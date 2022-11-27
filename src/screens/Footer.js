@@ -104,23 +104,36 @@ function Footer() {
       </div>
       <div className="footer-last di-fl-row">
         <div className="di-fl-col">
-        <span>
-          @Made By{" "}
-          <a href="https://open.kakao.com/me/jcmaker" target="_blank" rel="noreferrer" style={{color: "#ffa500"}}>
-            Navy_주녕
-          </a>
-        </span>
-        <span>ver1.10.8</span>
+          <span>
+            @Made By{" "}
+            <a
+              href="https://open.kakao.com/me/jcmaker"
+              target="_blank"
+              rel="noreferrer"
+              className="jcmaker"
+            >
+              Navy_주녕
+            </a>
+          </span>
+          <span>ver1.10.8</span>
         </div>
         <div className="di-fl-col">
-          <a className="span-link"  
+          <a
+            className="span-link"
             href="https://open.kakao.com/o/gt4C7LJc"
             target="_blank"
-            rel="noreferrer">친선문의</a>
-          <a className="span-link"  
+            rel="noreferrer"
+          >
+            친선문의
+          </a>
+          <a
+            className="span-link"
             href="https://navy-kartrider.web.app"
             target="_blank"
-            rel="noreferrer">가입문의</a>
+            rel="noreferrer"
+          >
+            가입문의
+          </a>
         </div>
       </div>
       <div className="openRule">
