@@ -5,9 +5,9 @@
 모바일 전용으로 만들었기 때문에 큰 디스플레이에선 다소 이상할수 있음.
 
 
-주소: https://navy-event.web.app
+주소: https://www.navy-event.com
 
-카러플 해군 클럽 가입 안내 주소: https://navy-kartrider.web.app
+카러플 해군 클럽 가입 안내 주소: https://www.navy-kartrider.com
 ![Logo](https://navy-event.web.app/images/emblem.png)
 
 
@@ -29,7 +29,7 @@
 - realtime database
 - useState, useEffect
 
-## Run Locally
+## Run Locally [ DOESN'T WORK ]
 
 Clone the project
 
